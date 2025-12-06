@@ -13,7 +13,6 @@ import Admin from './app/admin/page';
 import { RouterProvider, usePathname } from './lib/router-shim';
 import { AppProvider } from './lib/context';
 import Link from './lib/router-shim';
-import './app/globals.css';
 
 // 404 Component
 const NotFound = () => (
