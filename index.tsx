@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import RootLayout from './app/layout';
+import MainLayout from './components/MainLayout';
 import Home from './app/page';
 import Menu from './app/menu/page';
 import Order from './app/order/page';
@@ -12,7 +12,6 @@ import Gallery from './app/gallery/page';
 import Admin from './app/admin/page';
 import { RouterProvider, usePathname } from './lib/router-shim';
 import { AppProvider } from './lib/context';
-import CartFloat from './components/CartFloat';
 import Link from './lib/router-shim';
 
 // 404 Component
@@ -54,13 +53,15 @@ const AppContent = () => {
   else if (path === '/about') Component = About;
   else if (path === '/contact') Component = Contact;
   else if (path === '/gallery') Component = Gallery;
-  else if (path === '/admin') return <AppProvider><Admin /></AppProvider>; // Admin page has its own layout
+  else if (path === '/admin') {
+    // Admin page has its own internal layout logic (sidebar), so we render it without MainLayout
+    return <Admin />;
+  }
 
   return (
-    <RootLayout>
+    <MainLayout>
       <Component />
-      <CartFloat />
-    </RootLayout>
+    </MainLayout>
   );
 };
 
