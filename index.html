@@ -16,10 +16,10 @@
           extend: {
             colors: {
               primary: "#D35400", // Burnt Orange
-              secondary: "#2C3E50", // Dark Blue/Slate
+              secondary: "#111111", // Almost Pure Black
               accent: "#F1C40F", // Vivid Yellow
-              background: "#F9F9F9",
-              text: "#1F2937",
+              background: "#FFFFFF", // Pure White
+              text: "#000000", // Pure Black
             },
             fontFamily: {
               sans: ["Inter", "sans-serif"],
@@ -72,13 +72,13 @@
     /* Global Styles Inlined for Reliability */
     :root {
       --foreground-rgb: 0, 0, 0;
-      --background-start-rgb: 214, 219, 220;
+      --background-start-rgb: 255, 255, 255;
       --background-end-rgb: 255, 255, 255;
     }
 
     body {
-      color: #1F2937;
-      background-color: #F9F9F9;
+      color: #000000;
+      background-color: #FFFFFF;
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
@@ -86,10 +86,11 @@
 
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Playfair Display', serif;
+      color: #000000;
     }
 
     .glass-effect {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
     }
 

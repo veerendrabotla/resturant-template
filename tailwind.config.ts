@@ -9,10 +9,10 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#D35400", // Burnt Orange
-        secondary: "#2C3E50", // Dark Blue/Slate
+        secondary: "#111111", // Almost Pure Black (was Dark Blue/Slate)
         accent: "#F1C40F", // Vivid Yellow
-        background: "#F9F9F9",
-        text: "#1F2937",
+        background: "#FFFFFF", // Pure White
+        text: "#000000", // Pure Black
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
