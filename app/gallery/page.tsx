@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import Image from '@/components/Image';
 import SectionTitle from '@/components/SectionTitle';
