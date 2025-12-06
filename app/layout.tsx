@@ -1,28 +1,20 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Providers } from "./providers";
-import MainLayout from "@/components/MainLayout";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import React from "react";
 
-export const metadata: Metadata = {
-  title: "SpiceCraft Kitchen",
-  description: "Authentic Indian Cuisine",
-};
-
+// In a real Next.js app this wraps html/body, but for this client-shim we act as a wrapper div
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children?: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en">
-      <body className="font-sans bg-background text-text">
-        <Providers>
-          <MainLayout>
-            {children}
-          </MainLayout>
-        </Providers>
-      </body>
-    </html>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 }

@@ -1,4 +1,3 @@
-
 export interface Dish {
   id: number;
   name: string;
@@ -7,8 +6,6 @@ export interface Dish {
   image: string;
   category: "Starters" | "Main Course" | "Biryani" | "Drinks" | "Desserts";
   featured?: boolean;
-  isVeg: boolean;
-  spiciness?: 0 | 1 | 2 | 3; // 0: None, 1: Mild, 2: Medium, 3: Hot
 }
 
 export const DISHES: Dish[] = [
@@ -19,9 +16,7 @@ export const DISHES: Dish[] = [
     price: 280,
     category: "Starters",
     image: "https://picsum.photos/id/1080/600/400",
-    featured: true,
-    isVeg: true,
-    spiciness: 2
+    featured: true
   },
   {
     id: 2,
@@ -30,9 +25,7 @@ export const DISHES: Dish[] = [
     price: 350,
     category: "Biryani",
     image: "https://picsum.photos/id/292/600/400",
-    featured: true,
-    isVeg: false,
-    spiciness: 2
+    featured: true
   },
   {
     id: 3,
@@ -41,9 +34,7 @@ export const DISHES: Dish[] = [
     price: 380,
     category: "Main Course",
     image: "https://picsum.photos/id/835/600/400",
-    featured: true,
-    isVeg: false,
-    spiciness: 1
+    featured: true
   },
   {
     id: 4,
@@ -52,9 +43,7 @@ export const DISHES: Dish[] = [
     price: 120,
     category: "Drinks",
     image: "https://picsum.photos/id/431/600/400",
-    featured: false,
-    isVeg: true,
-    spiciness: 0
+    featured: false
   },
   {
     id: 5,
@@ -63,9 +52,7 @@ export const DISHES: Dish[] = [
     price: 100,
     category: "Desserts",
     image: "https://picsum.photos/id/493/600/400",
-    featured: false,
-    isVeg: true,
-    spiciness: 0
+    featured: false
   },
   {
     id: 6,
@@ -74,9 +61,7 @@ export const DISHES: Dish[] = [
     price: 450,
     category: "Main Course",
     image: "https://picsum.photos/id/292/600/400",
-    featured: false,
-    isVeg: false,
-    spiciness: 3
+    featured: false
   },
   {
     id: 7,
@@ -85,9 +70,7 @@ export const DISHES: Dish[] = [
     price: 220,
     category: "Starters",
     image: "https://picsum.photos/id/30/600/400",
-    featured: false,
-    isVeg: true,
-    spiciness: 1
+    featured: false
   },
   {
     id: 8,
@@ -96,9 +79,7 @@ export const DISHES: Dish[] = [
     price: 60,
     category: "Drinks",
     image: "https://picsum.photos/id/225/600/400",
-    featured: false,
-    isVeg: true,
-    spiciness: 1
+    featured: false
   }
 ];
 
